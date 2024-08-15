@@ -26,27 +26,22 @@ public class App
         WebElement firstName = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/div/div[1]/div[1]/div/input"));
         firstName.sendKeys("Ajay");
         
-        Thread.sleep(2000);
                 
         WebElement phoneNumber = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/div/div[1]/div[2]/div/input"));
         phoneNumber.sendKeys("43437878");
 
-        Thread.sleep(2000);
         
         WebElement eMail = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/div/div[2]/input"));
         eMail.sendKeys("ajay@rana.com");
 
-        Thread.sleep(2000);
         
         WebElement message = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/div/div[3]/input"));
         message.sendKeys("Hi! how are you?");
 
-        Thread.sleep(2000);
-        
+  
         WebElement submitButton = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/div/div[4]/button"));
         submitButton.click();
 
-        Thread.sleep(2000);
         
         String response = driver.findElement(By.id("message")).getText();
         System.out.println(response);
